@@ -1,0 +1,163 @@
+[gd_scene load_steps=5 format=3 uid="uid://bw3il4cbuv0hu"]
+
+[ext_resource type="Script" path="res://interface.gd" id="1_kgply"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_yp4l3"]
+font_size = 21
+
+[sub_resource type="Theme" id="Theme_bw468"]
+
+[sub_resource type="Theme" id="Theme_h88tp"]
+
+[node name="Interface" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kgply")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 300.0
+offset_bottom = 500.0
+color = Color(0.129412, 0.129412, 0.129412, 1)
+
+[node name="Display" type="ColorRect" parent="Background"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -145.0
+offset_top = 5.0
+offset_right = 145.0
+offset_bottom = 45.0
+grow_horizontal = 2
+color = Color(0.352941, 0.352941, 0.352941, 1)
+
+[node name="Text" type="Label" parent="Background/Display"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -135.0
+offset_top = -11.5
+offset_right = 135.0
+offset_bottom = 18.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0"
+label_settings = SubResource("LabelSettings_yp4l3")
+horizontal_alignment = 2
+
+[node name="GridContainer" type="GridContainer" parent="Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 4
+
+[node name="C" type="Button" parent="Background/GridContainer" groups=["botao"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_bw468")
+theme_override_colors/icon_normal_color = Color(0, 0.929412, 0.905882, 1)
+text = "C"
+
+[node name="=" type="Button" parent="Background/GridContainer" groups=["botao"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "="
+
+[node name="Mod" type="Button" parent="Background/GridContainer" groups=["botao"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_h88tp")
+text = "%"
+
+[node name="Div" type="Button" parent="Background/GridContainer" groups=["botao"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "/"
+
+[node name="7" type="Button" parent="Background/GridContainer" groups=["botao"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "7"
+
+[node name="8" type="Button" parent="Background/GridContainer" groups=["botao"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "8"
+
+[node name="9" type="Button" parent="Background/GridContainer" groups=["botao"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "9"
+
+[node name="x" type="Button" parent="Background/GridContainer" groups=["botao"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "x"
+
+[node name="4" type="Button" parent="Background/GridContainer" groups=["botao"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "4"
+
+[node name="5" type="Button" parent="Background/GridContainer" groups=["botao"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "5"
+
+[node name="6" type="Button" parent="Background/GridContainer" groups=["botao"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "6"
+
+[node name="-" type="Button" parent="Background/GridContainer" groups=["botao"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "-"
+
+[node name="1" type="Button" parent="Background/GridContainer" groups=["botao"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "1"
+
+[node name="2" type="Button" parent="Background/GridContainer" groups=["botao"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "2"
+
+[node name="3" type="Button" parent="Background/GridContainer" groups=["botao"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "3"
+
+[node name="+" type="Button" parent="Background/GridContainer" groups=["botao"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "+"
